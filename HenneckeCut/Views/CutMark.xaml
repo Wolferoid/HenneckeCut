@@ -1,0 +1,48 @@
+﻿<catel:UserControl x:Class="HenneckeCut.Views.CutMark"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:catel="http://catel.codeplex.com">
+
+    <catel:StackGrid>
+        <catel:StackGrid.ColumnDefinitions>
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition Width="40" />
+        </catel:StackGrid.ColumnDefinitions>
+        <catel:StackGrid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </catel:StackGrid.RowDefinitions>
+
+        <Label />
+        <Label Content="Мерная резка" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" />
+        <Label />
+
+        <Label />
+        <Button Content="ОТМЕТИТЬ" Command="{Binding MarkMetered}" Grid.ColumnSpan="2" Width="100" />
+        <Label />
+
+        <Label />
+        <Label Content="Ручное задание" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" />
+        <Label />
+
+        <Label />
+        <Button Content="НАЧАЛО" Command="{Binding MarkBegin}" Width="70" />
+        <Button Content="КОНЕЦ" Command="{Binding MarkEnd}" Width="70" />
+        <Label />
+
+        <Label Content="Статус подключения" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" />
+
+        <Ellipse Fill="{Binding LampConnectionStatus}" Height="25" Width="25" StrokeThickness="1" Stroke="Black"/>
+
+        <Label Content="{Binding StatusBarText}" ToolTip="{Binding StatusBarText}" Grid.ColumnSpan="4" />
+
+
+    </catel:StackGrid>
+
+</catel:UserControl>
